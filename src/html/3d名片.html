@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/card.css" type="text/css" />
+</head>
+
+<body>
+    <div class="card middle">
+        <div class="front">
+            <h2>Shuichi Akai</h2>
+            <span>Web Designer</span>
+            <ul class="contact-info">
+                <li>
+                    <i class="fa fa-mobile" aria-hidden="true"></i> +0000000000
+                </li>
+                <li>
+                    <i class="fa fa-envelope" aria-hidden="true"></i> akaishu@email.com
+                </li>
+                <li>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i> Tokyo, Japan
+                </li>
+            </ul>
+        </div>
+        <div class="back">
+                <span>DarkCode</span>
+        </div>
+    </div>
+    <script>
+        document.querySelector(".card").onclick = function () {
+            this.classList.toggle("card-active");
+        }
+    </script>
+</body>
+
+</html>
