@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/slideComment.css" type="text/css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner">
+            <h1>What User Says</h1>
+            <div class="border"></div>
+            <div class="slide">
+                <ul class="comments">
+                    <li class="comment">
+                        <div class="info"><img class="pic" src="../img/20171205122919_66049.jpg">
+                            <div class="user-name"><span>User1</span>@user1</div>
+                        </div>
+                        <p>
+                            Whatever is worth doing is worth doing well.
+                            One needs 3 things to be truly happy living in the world: some thing to do, some one to
+                            love, some thing to hope for.
+                        </p>
+                    </li>
+                    <li class="comment">
+                        <div class="info"><img class="pic" src="../img/u=2209474136,2963844054&fm=26&gp=0.jpg">
+                            <div class="user-name"><span>User2</span>@user2</div>
+                        </div>
+                        <p>
+                            Happiness is a way station between too much and too little.
+                        </p>
+                    </li>
+                    <li class="comment">
+                        <div class="info"><img class="pic" src="../img/u=3677460379,2967028570&fm=26&gp=0.jpg">
+                            <div class="user-name"><span>User3</span>@user3</div>
+                        </div>
+                        <p>
+                            You may be out of my sight, but never out of my mind.I lied when I said I didn’t like you. I
+                            lied when I said I didn’t care. I lie every time I try to tell myself I will never fall for
+                            you.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        let dom = document.querySelector(".comments");
+        let slide = document.querySelector(".slide")
+        let disX = 0;
+        let disY = 0;
+        let down = false;
+        let shouldOffset = 100;
+
+        dom.onmousedown = function (e) {
+            down = true;
+            disX = e.clientX - this.offsetLeft;
+            disY = e.clientY - this.offsetTop;
+
+            return false;
+        }
+        document.onmousemove = function (e) {
+
+            if (down == true) {
+                let t = e.clientX - disX;
+                let temp = dom.clientLeft + t;
+                if (temp < 0 + shouldOffset && temp >= -(dom.clientWidth - slide.clientWidth + shouldOffset)) {
+                    dom.style.left = temp + 'px';
+                }
+                if (temp > 0) {
+                    reback(0);
+                }
+                if (temp < -(dom.clientWidth - slide.clientWidth)) {
+                    reback(-(dom.clientWidth - slide.clientWidth));
+                }
+
+            }
+        }
+        document.onmouseup = function (e) {
+            down = false;
+        }
+
+        dom.ontouchstart = function (e) {
+
+            down = true;
+            disX = e.changedTouches[0].clientX - this.offsetLeft;
+            return false;
+        }
+        document.ontouchmove = function (e) {
+            if (down == true) {
+                let t = e.changedTouches[0].clientX - disX;
+                let temp = dom.clientLeft + t;
+
+                if (temp < 0 + shouldOffset && temp >= -(dom.clientWidth - slide.clientWidth + shouldOffset)) {
+                    dom.style.left = temp + 'px';
+                }
+                if (temp > 0) {
+                    reback(0);
+                }
+                if (temp < -(dom.clientWidth - slide.clientWidth)) {
+                    reback(-(dom.clientWidth - slide.clientWidth));
+                }
+            }
+        }
+        document.ontouchend = function (e) {
+            down = false;
+        }
+
+        let start = 0;
+
+        let reback = (function () {
+            let backer;
+            return function (target) {
+                clearInterval(backer);
+                backer = setInterval(function () {
+
+                    if (target - dom.offsetLeft != 0) {
+                        //像素改变最小为1，target大时向上取整为1，target小时向下取整为-1
+                        if (target > dom.offsetLeft) {
+                            dom.style.left = Math.ceil((target - dom.offsetLeft) / 20) + dom
+                                .offsetLeft + 'px';
+
+                        } else {
+                            dom.style.left = Math.floor((target - dom.offsetLeft) / 20) + dom
+                                .offsetLeft + 'px';
+
+                        }
+                    } else {
+                        clearInterval(backer)
+                    }
+
+                }, 16);
+            }
+
+        }());
+    </script>
+</body>
+
+</html>
