@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>滑动评论</title>
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/slideComment.css" type="text/css" />
 
@@ -50,95 +50,8 @@
             </div>
         </div>
     </div>
-    <script>
-        let dom = document.querySelector(".comments");
-        let slide = document.querySelector(".slide")
-        let disX = 0;
-        let disY = 0;
-        let down = false;
-        let shouldOffset = 100;
-
-        dom.onmousedown = function (e) {
-            down = true;
-            disX = e.clientX - this.offsetLeft;
-            disY = e.clientY - this.offsetTop;
-
-            return false;
-        }
-        document.onmousemove = function (e) {
-
-            if (down == true) {
-                let t = e.clientX - disX;
-                let temp = dom.clientLeft + t;
-                if (temp < 0 + shouldOffset && temp >= -(dom.clientWidth - slide.clientWidth + shouldOffset)) {
-                    dom.style.left = temp + 'px';
-                }
-                if (temp > 0) {
-                    reback(0);
-                }
-                if (temp < -(dom.clientWidth - slide.clientWidth)) {
-                    reback(-(dom.clientWidth - slide.clientWidth));
-                }
-
-            }
-        }
-        document.onmouseup = function (e) {
-            down = false;
-        }
-
-        dom.ontouchstart = function (e) {
-
-            down = true;
-            disX = e.changedTouches[0].clientX - this.offsetLeft;
-            return false;
-        }
-        document.ontouchmove = function (e) {
-            if (down == true) {
-                let t = e.changedTouches[0].clientX - disX;
-                let temp = dom.clientLeft + t;
-
-                if (temp < 0 + shouldOffset && temp >= -(dom.clientWidth - slide.clientWidth + shouldOffset)) {
-                    dom.style.left = temp + 'px';
-                }
-                if (temp > 0) {
-                    reback(0);
-                }
-                if (temp < -(dom.clientWidth - slide.clientWidth)) {
-                    reback(-(dom.clientWidth - slide.clientWidth));
-                }
-            }
-        }
-        document.ontouchend = function (e) {
-            down = false;
-        }
-
-        let start = 0;
-
-        let reback = (function () {
-            let backer;
-            return function (target) {
-                clearInterval(backer);
-                backer = setInterval(function () {
-
-                    if (target - dom.offsetLeft != 0) {
-                        //像素改变最小为1，target大时向上取整为1，target小时向下取整为-1
-                        if (target > dom.offsetLeft) {
-                            dom.style.left = Math.ceil((target - dom.offsetLeft) / 20) + dom
-                                .offsetLeft + 'px';
-
-                        } else {
-                            dom.style.left = Math.floor((target - dom.offsetLeft) / 20) + dom
-                                .offsetLeft + 'px';
-
-                        }
-                    } else {
-                        clearInterval(backer)
-                    }
-
-                }, 16);
-            }
-
-        }());
+    <script src="../js/slideComment.js">
+        
     </script>
 </body>
 
