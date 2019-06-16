@@ -13,3 +13,5 @@
 <img src="src/gif/login.gif" alt="login.gif"  width="400">
 1. [自适应导航栏 ](src/html/自适应导航栏.html)  
 <img src="src/gif/navbar.gif" alt="navbar.gif"  width="400">
+1. [注册 ](src/html/注册.html)  
+<img src="src/gif/register.gif" alt="register.gif"  width="400">
