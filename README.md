@@ -17,3 +17,5 @@
 <img src="src/gif/register.gif" alt="register.gif"  width="400">
 1. [交互按钮](src/html/交互按钮.html)  
 <img src="src/gif/button1.gif" alt="button1.gif"  width="400">
+1. [spriteButtons](src/html/spriteButtons.html)  
+<img src="src/gif/spriteButtons.gif" alt="spriteButtons.gif"  width="400">
