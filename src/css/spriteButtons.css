@@ -1,0 +1,71 @@
+body{
+    background-color: #3498db;
+    font-family:'Times New Roman', Times, serif;
+
+}
+.middle {
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.sprites{
+    background-color: #f1f1f1;
+    border-radius: 8px;
+}
+.sprites div {
+    margin: 15px 10px;
+    height: 50px;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 50px;
+    vertical-align: middle;
+    background-color: #fff;
+    box-shadow: 0 5px 15px -5px #00000070;
+    font-size: 18px;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.sprites span { 
+    margin-right: 5px;       
+    width: 20px;
+    height: 20px;
+    background-size: 60px 40px;
+    background-image: url('../img/667369-20151102163410633-1993262672.png');
+    display: inline-block;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+.sprites1 {
+    background-position: 0 0;
+}
+
+.sprites2 {
+    background-position: -20px 0;
+}
+
+.sprites3 {
+    background-position: 0 -20px;
+}
+
+.sprites4 {
+    background-position: -20px -20px;
+}
+
+.sprites5 {
+    background-position: -40px 0;
+}
+
+.sprites6 {
+    background-position: -40px -20px;
+}
+.sprites div:hover{
+    transform: translate(-8px);
+    box-shadow: 5px 5px 10px 0px #00000070;
+}
