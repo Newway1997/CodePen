@@ -19,3 +19,5 @@
 <img src="src/gif/button1.gif" alt="button1.gif"  width="400">
 1. [spriteButtons](src/html/spriteButtons.html)  
 <img src="src/gif/spriteButtons.gif" alt="spriteButtons.gif"  width="400">
+1. [翻转card](src/html/翻转card.html)  
+<img src="src/gif/flipCard.gif" alt="flipCard.gif"  width="400">
