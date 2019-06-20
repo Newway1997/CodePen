@@ -21,3 +21,5 @@
 <img src="src/gif/spriteButtons.gif" alt="spriteButtons.gif"  width="400">
 1. [翻转card](src/html/翻转card.html)  
 <img src="src/gif/flipCard.gif" alt="flipCard.gif"  width="400">
+1. [登录2 ](src/html/登录2.html)  
+<img src="src/gif/login2.gif" alt="login2.gif"  width="400">
