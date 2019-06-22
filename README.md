@@ -35,3 +35,6 @@
 
 1. [按钮hover ](src/html/buttonHover.html)  
 <img src="src/gif/buttonHover.gif" alt="buttonHover.gif"  width="400">
+
+1. [简洁社交导航栏](src/html/社交导航.html)  
+<img src="src/gif/comNav.gif" alt="comNav.gif"  width="400">
