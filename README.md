@@ -38,3 +38,6 @@
 
 1. [简洁社交导航栏](src/html/社交导航.html)  
 <img src="src/gif/comNav.gif" alt="comNav.gif"  width="400">
+
+1. [顶部导航栏](src/html/顶部导航栏.html)  
+<img src="src/gif/topNavbar.gif" alt="topNavbar.gif"  width="400">
