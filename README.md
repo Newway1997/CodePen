@@ -41,3 +41,7 @@
 
 1. [顶部导航栏](src/html/顶部导航栏.html)  
 <img src="src/gif/topNavbar.gif" alt="topNavbar.gif"  width="400">
+
+
+1. [图片背景](src/html/imgBackground.html)  
+<img src="src/gif/imgBg.png" alt="imgBg.png"  width="400">
