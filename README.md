@@ -45,3 +45,6 @@
 
 1. [图片背景](src/html/imgBackground.html)  
 <img src="src/gif/imgBg.png" alt="imgBg.png"  width="400">
+
+1. [隐藏切换侧边栏](src/html/sidebar.html)  
+<img src="src/gif/sidebar.gif" alt="sidebar.gif"  width="400">
