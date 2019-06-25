@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/sideBar.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+        </ul>
+    </div>
+    <a href="#" class="btn"><i class="fa"></i></a>
+    <script>
+        document.querySelector(".btn").onclick = function () {
+            this.classList.toggle("btn-status");
+            document.querySelector(".sidebar").classList.toggle("show");
+        }
+    </script>
+
+</body>
+
+</html>
