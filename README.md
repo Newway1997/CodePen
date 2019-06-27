@@ -51,3 +51,6 @@
 
 1. [switch按钮](src/html/switchButton.html)  
 <img src="src/gif/switchButton.gif" alt="switchButton.gif"  width="400">
+
+1. [回到顶部](src/html/回到顶部.html)  
+<img src="src/gif/goToTop.gif" alt="goToTop.gif"  width="400">
