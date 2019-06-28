@@ -54,3 +54,6 @@
 
 1. [回到顶部](src/html/回到顶部.html)  
 <img src="src/gif/goToTop.gif" alt="goToTop.gif"  width="400">
+
+1. [选项卡](src/html/选项卡.html)  
+<img src="src/gif/optionCard.gif" alt="optionCard.gif"  width="400">
