@@ -57,3 +57,6 @@
 
 1. [选项卡](src/html/选项卡.html)  
 <img src="src/gif/optionCard.gif" alt="optionCard.gif"  width="400">
+
+1. [折叠菜单](src/html/折叠菜单.html)  
+<img src="src/gif/折叠菜单.gif" alt="折叠菜单.gif"  width="400">
