@@ -69,3 +69,6 @@
 
 1. [hover3D](src/html/hover3D.html)  
 <img src="src/gif/hover3d.gif" alt="hover3d.gif"  width="400">
+
+1. [hover3D](src/html/文字颜色渐变.html)  
+<img src="src/gif/文字颜色渐变.gif" alt="文字颜色渐变.gif"  width="400">
