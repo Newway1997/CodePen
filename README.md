@@ -75,3 +75,6 @@
 
 1. [水纹](src/html/water.html)  
 <img src="src/gif/water.gif" alt="water.gif"  width="400">
+
+1. [轮播图](src/html/轮播图.html)  
+<img src="src/gif/轮播图.gif" alt="轮播图.gif"  width="400">
